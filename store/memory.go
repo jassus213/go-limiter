@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jassus213/go-rate-limiter/ratelimiter"
+	"github.com/jassus213/go-limiter/ratelimiter"
 )
 
 // fixedWindowEntry stores the counter and expiration time for a fixed window key.

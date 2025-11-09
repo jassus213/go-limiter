@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"time"
 
-	ratelimiter2 "github.com/jassus213/go-rate-limiter/ratelimiter"
+	"github.com/jassus213/go-limiter/ratelimiter"
 	"github.com/redis/go-redis/v9"
 )
 
@@ -45,7 +45,7 @@ type RedisStore struct {
 //
 //	client := redis.NewClient(&redis.Options{Addr: "localhost:6379"})
 //	store := store.NewRedis(client)
-func NewRedis(client *redis.Client) ratelimiter2.Store {
+func NewRedis(client *redis.Client) ratelimiter.Store {
 	const incrementLua = `
 		local current = redis.call("INCR", KEYS[1])
 		if tonumber(current) == 1 then
@@ -144,7 +144,7 @@ func (s *RedisStore) TakeToken(ctx context.Context, key string, rate float64, bu
 
 	arr, ok := res.([]interface{})
 	if !ok || len(arr) < 2 {
-		return false, 0, ratelimiter2.ErrorExceeded
+		return false, 0, ratelimiter.ErrorExceeded
 	}
 
 	allowed := arr[0].(int64) == 1
