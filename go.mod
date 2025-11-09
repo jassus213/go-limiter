@@ -1,4 +1,4 @@
-module github.com/jassus213/go-rate-limiter
+module github.com/jassus213/go-limiter
 
 go 1.23.0
 

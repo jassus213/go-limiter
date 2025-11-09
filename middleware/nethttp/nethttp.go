@@ -36,7 +36,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jassus213/go-rate-limiter/ratelimiter"
+	"github.com/jassus213/go-limiter/ratelimiter"
 )
 
 // Middleware returns a middleware handler for the standard net/http library.

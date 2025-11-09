@@ -1,10 +1,10 @@
-module github.com/jassus213/go-rate-limiter/adapters/log
+module github.com/jassus213/go-limiter/adapters/log
 
 go 1.25.4
 
 require (
 	github.com/gin-gonic/gin v1.11.0
-	github.com/jassus213/go-rate-limiter v0.0.1
+	github.com/jassus213/go-limiter v0.0.1
 )
 
 require (

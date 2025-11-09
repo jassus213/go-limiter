@@ -38,7 +38,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	ratelimiter "github.com/jassus213/go-rate-limiter"
+	ratelimiter "github.com/jassus213/go-limiter"
 )
 
 // RateLimiter creates a Gin middleware handler that enforces rate limiting.

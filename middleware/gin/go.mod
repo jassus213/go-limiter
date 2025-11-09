@@ -1,4 +1,4 @@
-module github.com/jassus213/go-rate-limiter/middleware/gin
+module github.com/jassus213/go-limiter/middleware/gin
 
 go 1.25.4
 

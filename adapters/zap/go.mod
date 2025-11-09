@@ -1,9 +1,9 @@
-module github.com/jassus213/go-rate-limiter/adapters/zap
+module github.com/jassus213/go-limiter/adapters/zap
 
 go 1.25.4
 
 require (
-	github.com/jassus213/go-rate-limiter v0.0.1
+	github.com/jassus213/go-limiter v0.0.1
 	go.uber.org/zap v1.27.0
 )
 
