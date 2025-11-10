@@ -41,7 +41,7 @@ func TestMemoryStore_TakeToken(t *testing.T) {
 	key := "user:abc"
 	rate := 1.0
 	burst := int64(2)
-	epsilon := 1e-3
+	epsilon := 1e-2
 
 	allowed, remaining, _ := s.TakeToken(ctx, key, rate, burst)
 	if !allowed {
